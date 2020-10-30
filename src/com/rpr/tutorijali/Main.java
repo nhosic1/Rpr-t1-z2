@@ -6,10 +6,13 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner ulaz = new Scanner(System.in);
-        System.out.println("Unesi broj: ");
+        System.out.print("Unesi broj: ");
         int n = ulaz.nextInt();
+        System.out.println("Brojevi od 1 do " + n + " koji su djeljivi sa sumom svojih cifara: ");
         for (int i=1; i<=n; i++){
-            if (i%10 == 0) System.out.println("Brojevi od 1 do " + n + " koji su djeljivi sa sumom svojih cifara: " + sumaCifara(i));
+            if (i%sumaCifara(i) == 0){
+                System.out.print(i + " ");
+            }
         }
 
 	// write your code here
